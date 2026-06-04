@@ -1,23 +1,58 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "abouts",
   "info": {
     "singularName": "about",
     "pluralName": "abouts",
-    "displayName": "About",
+    "displayName": "productss",
     "description": "Write about yourself and the content you create"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Necklaces",
+        "Earrings",
+        "Rings",
+        "Bracelets"
+      ]
+    },
+    "badge": {
+      "type": "enumeration",
+      "enum": [
+        "New",
+        "Hot",
+        "Best Seller",
+        "None"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "available": {
+      "type": "boolean"
     }
   }
 }
