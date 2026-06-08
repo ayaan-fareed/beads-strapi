@@ -528,7 +528,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     badge: Schema.Attribute.Enumeration<['New', 'Hot', 'Best Seller', 'None']> &
       Schema.Attribute.Required;
     category: Schema.Attribute.Enumeration<
-      ['Necklaces', 'Earrings', 'Rings', 'Bracelets', 'Best Seller']
+      ['Necklaces', 'Earrings', 'Rings', 'Bracelets']
     > &
       Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
